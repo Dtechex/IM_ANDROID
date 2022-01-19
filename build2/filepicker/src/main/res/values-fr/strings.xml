@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Paramètres</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment blanc</string>
+    <string name="all_images">Toutes les images</string>
+    <string name="done">Terminé</string>
+
+    <string name="permission_filepicker_rationale">Une autorisation de stockage est nécessaire pour accéder aux fichiers.</string>
+    <string name="no_files_found">Aucun fichier trouvé</string>
+    <string name="attachments_title_text" formatted="false">(%d/%d)</string>
+    <string name="attachments_num" formatted="false">%d</string>
+    <string name="select_photo_text">Sélectionnez un média</string>
+    <string name="select_doc_text">Sélectionnez un document</string>
+    <string name="no_camera_exists">Aucune application n\'existe pour la caméra!</string>
+    <string name="pdf_title">PDF</string>
+    <string name="ppt_title">PPT</string>
+    <string name="word_title">DOC</string>
+    <string name="excel_title">XLS</string>
+    <string name="txt_title">SMS</string>
+    <string name="videos">Vidéos</string>
+    <string name="images">Images</string>
+    <string name="all_photos">Toutes les photos</string>
+    <string name="all_videos">Toutes les vidéos</string>
+    <string name="all_files">Tous les fichiers</string>
+    <string name="really_send">Voulez-vous vraiment envoyer?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="file_size_limit">Le fichier ne doit pas sortir plus de 50mb</string>
+    <string name="video_format_not_supported">Video format not supported</string>
+</resources>

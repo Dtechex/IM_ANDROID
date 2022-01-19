@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--
+  ~ Copyright (C) 2015 Actor LLC. <https://actor.im>
+  -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#90000000"
+    android:id="@+id/root"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="@string/choose_theme"
+            android:textSize="18sp"
+            android:textColor="@color/secondary_text_default_material_light" />
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="#12000000"
+            />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    </FrameLayout>

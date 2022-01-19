@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selected_chat_row">
+
+    <FrameLayout
+        android:id="@+id/outgoing_layout_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/chat_curved_accent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom|end"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/text_message_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/secondarytext"
+                android:textSize="@dimen/text_size_very_small"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="5dp"
+                android:text="11:15 PM"
+                android:textAlignment="viewStart"/>
+
+            <ImageView
+                android:id="@+id/tickimage"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/double_tick"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_message_body"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="1.5dp"
+            android:fontFamily="@font/font_regular"
+            android:textColor="@color/primarytext"
+            android:textColorLink="@color/colorAccent"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Rahul Agrawal is a good boy but he does not know what he wants."
+            android:textDirection="locale"
+            android:textAlignment="viewStart"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

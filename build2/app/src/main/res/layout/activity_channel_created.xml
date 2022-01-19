@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChannelRequestActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/channelImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/appicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/successfully_created"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/txtChannelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:maxLines="10"
+            android:padding="5dp"
+            android:text="Demo Channel"
+            android:textColor="@color/secondarytext"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/txtChannelDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:maxLines="10"
+            android:padding="5dp"
+            android:text="@string/description"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/btnInvite"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/curved_gradient"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/invite_subscribers"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/build2.iml" filepath="$PROJECT_DIR$/.idea/modules/build2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/build2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/build2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/camerakit/build2.camerakit.iml" filepath="$PROJECT_DIR$/.idea/modules/camerakit/build2.camerakit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filepicker/build2.filepicker.iml" filepath="$PROJECT_DIR$/.idea/modules/filepicker/build2.filepicker.iml" />
+    </modules>
+  </component>
+</project>

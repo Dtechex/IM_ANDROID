@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+
+    tools:context="FeedDisplayFragment">
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/pbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+    <com.loopytime.external.TouchImageView
+        android:id="@+id/transition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="center" />
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="72dp"
+        android:textColor="#fff"
+        android:textSize="64sp"
+        android:visibility="gone" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatarView"
+        android:layout_marginTop="-7dp"
+        android:progressTint="#fff" />
+
+    <FrameLayout
+        android:id="@+id/lkl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/nameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/imgly_dialog_background2"
+            android:clickable="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:inputType="text|textMultiLine"
+            android:padding="8dp"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listLikes"
+            android:layout_below="@+id/nameEdit"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarView"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/uName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/frmw"
+            android:layout_toRightOf="@+id/avatarView"
+            android:clickable="true"
+            android:fontFamily="sans-serif-light"
+            android:inputType="text|textMultiLine"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/uDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uName"
+            android:layout_toLeftOf="@+id/frmw"
+            android:layout_toRightOf="@+id/avatarView"
+            android:clickable="true"
+            android:fontFamily="sans-serif"
+            android:inputType="text|textMultiLine"
+            android:paddingLeft="8dp"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/frmw"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/likeButtonfrm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+
+                <ImageView
+
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:tint="#fff"
+                    app:srcCompat="@drawable/ic_insert_emoticon_black_24dp" />
+
+                <TextView
+                    android:id="@+id/likeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/circle_record"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:typeface="sans" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/ttl_views_frm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:tint="#fff"
+                    android:src="@drawable/ic_chat_black_24dp"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ttl_views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/circle_record"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:typeface="sans" />
+                <ImageView
+                    android:id="@+id/rply_lay"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|right"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_like_button" />
+    <TextView
+        android:id="@+id/reUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-light"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:layout_above="@+id/nameEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:gravity="center"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+
+        android:text="Upload Again"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textColor="#646464"
+        android:visibility="gone" />
+</FrameLayout>

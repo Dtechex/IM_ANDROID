@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomChatSettingActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="pb_sec,status,div" />
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/pb_sec"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:indeterminate="true"
+                android:theme="@style/myPBStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/status"
+                app:layout_constraintRight_toLeftOf="@+id/status"
+                app:layout_constraintTop_toTopOf="@+id/status" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/wait_pb"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/status" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_chat_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/primarytext"
+                android:fontFamily="sans-serif"
+                android:minHeight="48dp"
+                android:text="@string/enable_random_chats"
+                android:textColor="@color/primarytext"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/div" />
+
+            <View
+                android:id="@+id/div1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/switchChat" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/div1" />
+
+            <View
+                android:id="@+id/div2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_redeem_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="@string/sel_dob"
+                android:onClick="onDOBClick"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/div2" />
+
+            <View
+                android:id="@+id/div3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+            <TextView
+                android:id="@+id/gen"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_group_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="@string/sel_gen"
+                android:onClick="onGenClick"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/div3" />
+
+            <View
+                android:id="@+id/div4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/gen" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/country"
+                android:drawablePadding="8dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:typeface="sans"
+                android:inputType="textCapWords"
+                android:hint="@string/country_hint"
+                android:capitalize="words"
+                android:drawableLeft="@drawable/ic_baseline_public_24"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/div4" />
+            <View
+                android:id="@+id/div5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/country" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/city"
+                android:drawablePadding="8dp"
+                android:hint="@string/city_hint"
+                android:background="@null"
+                android:inputType="textCapWords"
+                android:capitalize="words"
+                android:drawableLeft="@drawable/ic_baseline_location_city_24"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:typeface="sans"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/div5" />
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/switchChat">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="@string/about"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

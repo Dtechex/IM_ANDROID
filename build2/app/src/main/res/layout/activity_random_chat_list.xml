@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomChatListActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="pb_sec,status,div" />
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/pb_sec"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:indeterminate="true"
+                android:theme="@style/myPBStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/status"
+                app:layout_constraintRight_toLeftOf="@+id/status"
+                app:layout_constraintTop_toTopOf="@+id/status" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/wait_pb"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/status" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatarView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/div" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_marginTop="16dp"
+                android:includeFontPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/primarytext"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/avatarView" />
+            <TextView
+                android:id="@+id/city"
+                android:includeFontPadding="false"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+            <!--<View
+                android:id="@+id/div1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+-->
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawableLeft="@drawable/fui_ic_phone_white_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/primarytext"
+                android:fontFamily="sans-serif"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/city" />
+
+            <View
+                android:id="@+id/div2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_redeem_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="@string/sel_dob"
+                android:onClick="onDOBClick"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/div2" />
+
+            <View
+                android:id="@+id/div3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#15000000"
+                app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+            <TextView
+                android:id="@+id/gen"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_group_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="@string/sel_gen"
+                android:onClick="onGenClick"
+                android:textColor="@color/primarytext"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintTop_toBottomOf="@+id/div3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/next"
+                android:layout_marginEnd="8dp"
+                android:onClick="onCancelClicked"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/chat"
+                app:layout_constraintTop_toBottomOf="@+id/gen" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chat"
+                android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_width="0dp"
+                android:onClick="onChatClicked"
+                android:layout_height="56dp"
+                android:text="@string/chat"
+                app:layout_constraintLeft_toRightOf="@+id/cancel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gen" />
+
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/switchChat">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="@string/about"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/no_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e3e3e1"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/pb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:theme="@style/myPBStyle"/>
+        <ImageView
+            android:tint="#838383"
+            android:id="@+id/imv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/no_chat" />
+
+        <TextView
+            android:id="@+id/msg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/enable_random_chat"
+            android:textColor="#838383"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnNext"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        android:background="@drawable/fablay_bg"
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/fab"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_settings_24"
+            android:tint="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

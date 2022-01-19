@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:keepScreenOn="true"
+    tools:context=".status.CameraKitActivity">
+
+    <LinearLayout
+        android:id="@+id/content_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.wonderkiln.camerakit.CameraView
+                android:id="@+id/camera_kit_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ckCropOutput="false"
+                app:ckDoubleTapToToggleFacing="true"
+                app:ckFacing="back"
+                app:ckFlash="off"
+                app:ckFocus="off"
+                app:ckJpegQuality="100"
+                app:ckMethod="standard"
+                app:ckZoom="0" />
+
+            <Button
+                android:id="@+id/permissionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/approve_permissions"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timerLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/switch_camera_button_alt"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_small"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_recorder"
+            android:layout_width="@dimen/other_button_small"
+            android:layout_height="@dimen/margin_small"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/switch_camera_button_alt"
+            android:padding="@dimen/spacing_small"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/recorder_time" />
+
+        <TextView
+            android:id="@+id/txt_record_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="0dp">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_flash"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:background="@drawable/selector_flash"
+            android:button="@null"
+            android:checked="false"
+            android:contentDescription="@string/switch_camera_button_alt"
+            android:padding="10dp" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:background="@drawable/selector_camera_switch"
+            android:button="@null"
+            android:checked="false"
+            android:padding="10dp" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="@dimen/margin_xsmall"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/txt_tap_hold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/hold_for_video_tap_for_photo"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_gallery"
+            android:layout_width="@dimen/margin_medium"
+            android:layout_height="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/switch_camera_button_alt"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/gallery" />
+
+        <ImageView
+            android:id="@+id/btn_image"
+            android:layout_width="@dimen/margin_normal"
+            android:layout_height="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:padding="10dp"
+            android:src="@drawable/camera_selected"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_capture"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/btn_video" />
+
+        <ImageView
+            android:id="@+id/btn_video"
+            android:layout_width="@dimen/margin_normal"
+            android:layout_height="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:padding="10dp"
+            android:src="@drawable/video"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_capture"
+            app:layout_constraintLeft_toLeftOf="@id/btn_image"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_status"
+            android:layout_width="@dimen/margin_medium"
+            android:layout_height="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:contentDescription="@string/gallery_button_alt"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/text_status" />
+
+        <ImageView
+            android:id="@+id/btn_capture"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xlarge"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:contentDescription="@string/capture_button_alt"
+            android:padding="@dimen/margin_xsmall"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

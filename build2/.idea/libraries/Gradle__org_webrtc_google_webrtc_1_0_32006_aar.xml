@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: org.webrtc:google-webrtc:1.0.32006@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c0e3de506801da8351bdb6f81f27b76/jetified-google-webrtc-1.0.32006/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c0e3de506801da8351bdb6f81f27b76/jetified-google-webrtc-1.0.32006/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c0e3de506801da8351bdb6f81f27b76/jetified-google-webrtc-1.0.32006/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7e437a4467b7751a9366229a46c2cbd8/jetified-google-webrtc-1.0.32006/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7e437a4467b7751a9366229a46c2cbd8/jetified-google-webrtc-1.0.32006/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7e437a4467b7751a9366229a46c2cbd8/jetified-google-webrtc-1.0.32006/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/101ae45e94a7fb53ac3c2e821ca38443/jetified-google-webrtc-1.0.32006/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/101ae45e94a7fb53ac3c2e821ca38443/jetified-google-webrtc-1.0.32006/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/101ae45e94a7fb53ac3c2e821ca38443/jetified-google-webrtc-1.0.32006/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d38f02525eb2543b5e7f4218abc964b1/jetified-google-webrtc-1.0.32006/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d1d559c727ad120810a883927839677/jetified-google-webrtc-1.0.32006/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d1d559c727ad120810a883927839677/jetified-google-webrtc-1.0.32006/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d1d559c727ad120810a883927839677/jetified-google-webrtc-1.0.32006/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bc48579b97f6a308a58e9fe2ffce17fb/jetified-google-webrtc-1.0.32006/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bc48579b97f6a308a58e9fe2ffce17fb/jetified-google-webrtc-1.0.32006/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bc48579b97f6a308a58e9fe2ffce17fb/jetified-google-webrtc-1.0.32006/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

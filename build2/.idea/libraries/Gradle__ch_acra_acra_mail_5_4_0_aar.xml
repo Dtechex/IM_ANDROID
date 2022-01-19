@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="Gradle: ch.acra:acra-mail:5.4.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d52ad3d6dacb8dad13d3c53c20e5d48f/jetified-acra-mail-5.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d52ad3d6dacb8dad13d3c53c20e5d48f/jetified-acra-mail-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d52ad3d6dacb8dad13d3c53c20e5d48f/jetified-acra-mail-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/92f5b7f0a364b3776cfb6cc044c1a4cd/jetified-acra-mail-5.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/92f5b7f0a364b3776cfb6cc044c1a4cd/jetified-acra-mail-5.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/92f5b7f0a364b3776cfb6cc044c1a4cd/jetified-acra-mail-5.4.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5517dc56839a79ce17342e2807a6b5d5/jetified-acra-mail-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5517dc56839a79ce17342e2807a6b5d5/jetified-acra-mail-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5517dc56839a79ce17342e2807a6b5d5/jetified-acra-mail-5.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ff5a13564aaae78ea0d9e9fd97e6e6e/jetified-acra-mail-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/510825ac2e56d6572662fd47aacc26a6/jetified-acra-mail-5.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/510825ac2e56d6572662fd47aacc26a6/jetified-acra-mail-5.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/510825ac2e56d6572662fd47aacc26a6/jetified-acra-mail-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/49d93af6e1acfd9d8fddb36c3bc33e97/jetified-acra-mail-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/49d93af6e1acfd9d8fddb36c3bc33e97/jetified-acra-mail-5.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/49d93af6e1acfd9d8fddb36c3bc33e97/jetified-acra-mail-5.4.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.acra/acra-mail/5.4.0/1d9ecd7ed75e1da7019701983d99a8ada53ccc56/acra-mail-5.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.acra/acra-mail/5.4.0/70cd5ddf4fe787a187235872a61f14edcb855e1d/acra-mail-5.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

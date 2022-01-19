@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PrivacyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/actionbar"
+            layout="@layout/activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/who_can_see_my_personal_info"
+                    android:textAppearance="@style/NavigationDrawerTextStyle"
+                    android:textColor="@color/secondarytext"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/lastSeenLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/last_seen"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/primarytext"  />
+
+                    <TextView
+                        android:id="@+id/txtLastSeen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/everyone"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/secondarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/photoLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/profile_photo"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/primarytext" />
+
+                    <TextView
+                        android:id="@+id/txtProfilePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/my_contacts"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/secondarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aboutLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/about"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/primarytext" />
+
+                    <TextView
+                        android:id="@+id/txtAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/everyone"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/secondarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/statusLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/status"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/primarytext" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/everyone"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/secondarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/messageLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/messaging"
+                            android:textAppearance="@style/NavigationDrawerTextStyle"
+                            android:textColor="@color/secondarytext" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/blockedLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtBlocked"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/blocked_contacts"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/primarytext" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/list_of_contacts_that_you_have_blocked"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/secondarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/receiptLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/read_receipts"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/primarytext" />
+
+                    <TextView
+                        android:id="@+id/txtReceipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/my_contacts"
+                        android:textAppearance="@style/NavigationDrawerTextStyle"
+                        android:textColor="@color/secondarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

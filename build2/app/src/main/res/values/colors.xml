@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="primary">#4d74a6</color>
+    <color name="colorPrimaryDark">#b0b0b0</color>
+    <color name="secondarybg">#c0c0c0</color>
+    <color name="colorAccent">#1e6383</color>
+    <color name="navigationbg">#e5ffffff</color>
+    <color name="secondary_selected">#33999999</color>
+    <color name="secondary_pressed">#66999999</color>
+    <color name="secondary">#eeeeee</color>
+    <color name="primary_hovered">#3d5d85</color>
+    <color name="primary_pressed">#6b85a6</color>
+    <color name="primarytext">#434343</color>
+    <color name="secondarytext">#a3a3a3</color>
+    <color name="colorPrimaryTrans">#68ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="divider">#e2e2e2</color>
+    <color name="radio_button_blue">#1E6787</color>
+    <color name="switch_blue">#1C6A7D</color>
+    <color name="shimmer_background_color">#dad8d8</color>
+    <color name="shimmer_background_color_orig">#dad8d8</color>
+
+    <color name="dialog_overlay">#33000000</color>
+    <color name="conv_date_bg">#64000000</color>
+    <color name="selector_selected">#66999999</color>
+    <color name="selector_hover">#33999999</color>
+    <color name="white">#ffffff</color>
+    <color name="option_background">#F5F5F5</color>
+    <color name="colorVeryLightGrey">#EDEDEE</color>
+    <color name="tabUnderline">#727272</color>
+    <color name="tabFont">#4d4c4c</color>
+    <color name="profileImage">#f9f9f9</color>
+    <color name="call_red">#fe063b</color>
+    <color name="call_green">#48cd68</color>
+    <color name="text_blue">#56C1BC</color>
+    <color name="colorTyping">#2dc168</color>
+    <color name="chat_selected">#A6C0C0C0</color>
+    <color name="colorBlack">#000000</color>
+    <color name="status_reply_bg">#5B969696</color>
+    <color name="loading_bg">#80C0C0C0</color>
+
+
+    <!--<color name="progress_primary">#fff</color>-->
+    <color name="progress_primary">@color/white</color>
+    <color name="progress_secondary">@color/colorPrimaryTrans</color>
+    <color name="progress_max_active">@color/white</color>
+
+
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+
+
+    <!-- VIDEO TRIMMER -->
+    <color name="gradient_start">#1d9f9a</color>
+    <color name="gradient_end">#1e6383</color>
+    <color name="background_video_color">#2f3031</color>
+    <color name="background_progress_color">#6C6D6D</color>
+    <color name="progress_color">@color/colorPrimary</color>
+    <color name="line_color">#0DC143</color>
+    <color name="shadow_color">#FF000000</color>
+    <color name="light_transparent">#97000000</color>
+    <color name="line_button">#565758</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="colorText">#53002F</color>
+
+</resources>

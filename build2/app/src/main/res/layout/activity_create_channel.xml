@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateChannelActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/imageLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/userImage"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/noimage"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/upload_camera" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nameLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toEndOf="@+id/imageLayout"
+                        android:theme="@style/TextInputLayoutDesign"
+                        app:hintTextAppearance="@style/TextInputHintLabel"
+                        android:textAlignment="viewStart">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtChannelName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_bg"
+                            android:fontFamily="@font/font_regular"
+                            android:gravity="center_vertical|start"
+                            android:hint="@string/name_your_channel"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1"
+                            android:textColor="@color/primarytext"
+                            android:textSize="@dimen/text_size_medium"
+                            app:backgroundTint="@color/divider"
+                            android:textAlignment="viewStart"
+                            android:layoutDirection="locale"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/aboutLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameLay"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toEndOf="@+id/imageLayout"
+                        android:theme="@style/TextInputLayoutDesign"
+                        app:hintTextAppearance="@style/TextInputHintLabel"
+                        android:textAlignment="viewStart">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtChannelDes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_bg"
+                            android:fontFamily="@font/font_regular"
+                            android:gravity="center_vertical|start"
+                            android:hint="@string/description"
+                            android:inputType="textMultiLine"
+                            android:maxLength="250"
+                            android:textAlignment="viewStart"
+                            android:layoutDirection="locale"
+                            android:textColor="@color/primarytext"
+                            android:textSize="@dimen/text_size_medium"
+                            app:backgroundTint="@color/divider" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:id="@+id/channelTypeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/font_regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/channel_type"
+
+                        android:textColor="@color/primarytext"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <RelativeLayout
+                        android:id="@+id/publicLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/btnPublic"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/check_box_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:fontFamily="@font/font_regular"
+                            android:layoutDirection="ltr"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_size_medium"
+                            android:theme="@style/BlueRadioBuButton" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/btnPublic"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_regular"
+                                android:gravity="center_vertical"
+                                android:text="@string/public_string"
+
+                                android:textColor="@color/primarytext"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/font_regular"
+                                android:gravity="center_vertical"
+                                android:text="@string/public_channel_des"
+
+                                android:textColor="@color/secondarytext"
+                                android:textSize="@dimen/text_size_small" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/privateLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/btnPrivate"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/check_box_selector"
+                            android:button="@null"
+                            android:fontFamily="@font/font_regular"
+                            android:layoutDirection="ltr"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_size_medium"
+                            android:theme="@style/BlueRadioBuButton" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/btnPrivate"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_regular"
+                                android:gravity="center_vertical"
+                                android:text="@string/private_string"
+                                android:textColor="@color/primarytext"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/font_regular"
+                                android:gravity="center_vertical"
+                                android:text="@string/privact_channels_can_only_be_joined_via_invite_link"
+                                android:textColor="@color/secondarytext"
+                                android:textSize="@dimen/text_size_small" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNext"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="25dp"
+                android:background="@drawable/fablay_bg"
+                android:elevation="5dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/fab"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/floating_right_arrow"
+                    android:tint="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

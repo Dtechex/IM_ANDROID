@@ -1,0 +1,9 @@
+
+
+alias name	:jadejaalias
+password	:9879949713@im
+
+
+sha1 debug	:62:06:3A:CD:62:F8:55:AF:22:30:AF:9A:96:9F:B9:7D:2C:5E:6B:95
+
+sha1 release	:0F:05:68:9C:A8:53:31:73:E2:B8:1F:7E:F1:6E:F4:9A:69:92:9D:4D

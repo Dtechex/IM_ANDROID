@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="row_active">#efefef</color>
+  <color name="colorPrimary">#FFFFFF</color>
+  <color name="colorPrimaryDark">#b0b0b0</color>
+  <color name="colorAccent">#1e6383</color>
+  <color name="bg_gray">#ffffff</color>
+  <color name="transparent_black">#94333232</color>
+  <color name="checkbox_color">#1e6383</color>
+  <color name="checkbox_unchecked_color">#DFDFDF</color>
+  <color name="search_icon_color">@android:color/white</color>
+
+  <drawable name="tab_gray">@color/bg_gray</drawable>
+  <drawable name="tab_white">@android:color/white</drawable>
+  <color name="primarytext">#434343</color>
+</resources>

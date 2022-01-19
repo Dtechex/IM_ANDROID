@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLay"
+    android:background="@color/colorBlack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/video_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/colorBlack"
+        android:visibility="visible">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/exoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:auto_show="true"
+            app:repeat_toggle_modes="all"
+            app:use_controller="false" />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/imageProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="64dp"
+        android:layout_height="12dp"
+        android:layout_centerInParent="true"
+        android:max="100"
+        android:progress="0" />
+
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/reverse"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <!--android:background="@android:color/holo_green_dark"-->
+        <View
+            android:id="@+id/center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+        <View
+            android:id="@+id/skip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <com.loopytime.im.status.StoryStatusView
+        android:id="@+id/storiesStatus"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="invisible"
+        android:layout_gravity="top"
+        android:layout_marginTop="8dp" />
+
+   <!-- <com.hitasoft.loopytime.external.story.StoriesProgressView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="invisible"
+        android:id="@+id/storiesStatus"
+        android:layout_gravity="top"
+        android:layout_marginTop="8dp"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storiesStatus"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/userImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_very_small" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/speaker"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/more"
+            android:padding="8dp"
+            android:src="@drawable/speaker"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/close"
+            android:padding="8dp"
+            android:src="@drawable/mute"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7dp"
+            android:padding="8dp"
+            android:src="@drawable/close_white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_transparent"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/statusMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:maxLines="15"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textDirection="ltr"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/edtLay"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <com.loopytime.external.CustomEditText
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/sent"
+                android:background="@drawable/status_edittext_bg"
+                android:fontFamily="@font/font_regular"
+                android:hint="@string/say_something"
+                android:inputType="textCapSentences|textMultiLine"
+                android:isScrollContainer="true"
+                android:maxLines="6"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp"
+                android:privateImeOptions="disableSticker=true;disableGifKeyboard=true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+            <ImageView
+                android:id="@+id/sent"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/gradient_round_withoutborder"
+                android:padding="13dp"
+                android:src="@drawable/sent"
+                android:tint="@color/white" />
+
+
+            <ImageView
+                android:id="@+id/statusView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:src="@drawable/eye"
+                android:tint="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/seenCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/statusView"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textDirection="ltr"
+                android:textSize="@dimen/text_size_large"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

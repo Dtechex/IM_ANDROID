@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ProfileInfo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:src="@drawable/back_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:paddingStart="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/profileinfo"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/text_size_large"
+            />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="2"
+            android:text="@string/profileinfodetail"
+            android:textColor="@color/secondarytext"
+            android:textSize="@dimen/text_size_small"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/detail"
+            android:scaleType="centerCrop" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/noimage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/detail"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upload_camera" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/userImage"
+            android:theme="@style/TextInputLayoutDesign"
+            app:hintTextAppearance="@style/TextInputHintLabel"
+            android:textAlignment="viewStart">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center_vertical|start"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/text_size_medium"
+                app:backgroundTint="@color/divider"
+                android:textAlignment="viewStart"
+                android:textDirection="ltr" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/aboutLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameLay"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/userImage"
+            android:theme="@style/TextInputLayoutDesign"
+            app:hintTextAppearance="@style/TextInputHintLabel"
+            android:textAlignment="viewStart">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center_vertical|start"
+                android:hint="@string/whats_in_ur_mind"
+                android:inputType="textMultiLine"
+                android:maxLength="250"
+                android:maxLines="4"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/text_size_medium"
+                app:backgroundTint="@color/divider"
+                android:textAlignment="viewStart"
+                android:textDirection="ltr" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnNext"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="25dp"
+        android:background="@drawable/fablay_bg"
+        android:elevation="5dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fab"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:src="@drawable/floating_right_arrow"
+            android:tint="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

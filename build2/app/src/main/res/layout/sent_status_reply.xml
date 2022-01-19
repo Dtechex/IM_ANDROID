@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selected_chat_row">
+
+    <FrameLayout
+        android:id="@+id/outgoing_layout_bubble"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:minWidth="200dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/chat_curved_accent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/text_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/font_regular"
+                android:text="11:15 PM"
+                android:textAlignment="viewStart"
+                android:textColor="@color/secondarytext"
+                android:textSize="@dimen/text_size_very_small" />
+
+            <ImageView
+                android:id="@+id/tickimage"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="1dp"
+                android:src="@drawable/double_tick"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/statusImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/secondarybg"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="0dp"
+                    app:riv_mutate_background="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/statusImage"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/statusName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/you"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/primarytext"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/statusTypeImage"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:tint="@color/primarytext"
+                            android:src="@drawable/video"/>
+
+                        <TextView
+                            android:id="@+id/statusTypeName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/statusTypeImage"
+                            android:layout_marginStart="20dp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/font_regular"
+                            android:text="@string/image"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/primarytext"
+                            android:textSize="@dimen/text_size_small" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_message_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_regular"
+                android:lineSpacingExtra="1.5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Rahul Agrawal is a good boy but he does not know what he wants."
+                android:textAlignment="viewStart"
+                android:textDirection="ltr"
+                android:textColor="@color/primarytext"
+                android:textColorLink="@color/colorAccent"
+                android:textSize="@dimen/text_size_medium" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

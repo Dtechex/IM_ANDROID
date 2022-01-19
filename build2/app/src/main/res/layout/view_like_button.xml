@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+
+    android:layout_gravity="center"
+       android:layout_height="300dp">
+
+    <com.loopytime.external.videotrimmer.view.DotsView
+        android:id="@+id/vDotsView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"/>
+
+    <com.loopytime.external.videotrimmer.view.CircleViewAnim
+        android:id="@+id/vCircle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivStar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:contentDescription="Mark favorite"
+        />
+
+</FrameLayout>

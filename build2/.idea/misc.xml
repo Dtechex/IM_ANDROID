@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Upadhyay-Pc/Downloads/build/app/src/main/res/layout/activity_welcome.xml" value="0.18" />
+        <entry key="..\:/Users/Upadhyay-Pc/Downloads/build/app/src/main/res/layout/fragment_sign_phone2.xml" value="0.1921875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12447916666666667" />
+        <entry key="app/src/main/res/layout/activity_main_chat.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/activity_profile_info.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/chat_voice_receive.xml" value="0.55" />
+        <entry key="app/src/main/res/layout/chat_voice_sent.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_sign_phone2.xml" value="0.15885416666666666" />
+        <entry key="app/src/main/res/menu/activity_fragment_main_drawer.xml" value="0.12447916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

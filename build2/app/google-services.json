@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "826755664622",
+    "firebase_url": "https://im32-7e67f.firebaseio.com",
+    "project_id": "im32-7e67f",
+    "storage_bucket": "im32-7e67f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826755664622:android:058396f938183e28f281ff",
+        "android_client_info": {
+          "package_name": "com.app.im"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826755664622-1ub44po9sn94u53ankof454h9vhdoreu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.im",
+            "certificate_hash": "71815f530710ec39fee1a1b96547e1f0e58a50d8"
+          }
+        },
+        {
+          "client_id": "826755664622-3jt8akjfsed3qb4mqaa1i0s1jdk7edmu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.im",
+            "certificate_hash": "d317f86a31cc1506993921321fa6b957c9a28c25"
+          }
+        },
+        {
+          "client_id": "826755664622-ncvh902vttfdvi3dvc0etslk7tag1ujo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnRswVQvJtgJnojfVBxLhUppLvlsiWrjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826755664622-ncvh902vttfdvi3dvc0etslk7tag1ujo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826755664622:android:e96b914b70fadbe2f281ff",
+        "android_client_info": {
+          "package_name": "com.loopytime.im"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826755664622-kosd64utmqhr43ugc791brjqu8pko2bj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.loopytime.im",
+            "certificate_hash": "d317f86a31cc1506993921321fa6b957c9a28c25"
+          }
+        },
+        {
+          "client_id": "826755664622-gmc8n09d7u3b2orcb4vvo4f2brp1buia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.loopytime.im",
+            "certificate_hash": "62063acd62f855af2230af9a969fb97d2c5e6b95"
+          }
+        },
+        {
+          "client_id": "826755664622-ncvh902vttfdvi3dvc0etslk7tag1ujo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnRswVQvJtgJnojfVBxLhUppLvlsiWrjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826755664622-ncvh902vttfdvi3dvc0etslk7tag1ujo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

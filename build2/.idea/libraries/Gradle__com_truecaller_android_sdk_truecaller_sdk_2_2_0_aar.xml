@@ -1,0 +1,42 @@
+<component name="libraryTable">
+  <library name="Gradle: com.truecaller.android.sdk:truecaller-sdk:2.2.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-android-19.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-compatibility-19.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0efb8504f828013f4d74b94358eb3a7a/jetified-truecaller-sdk-2.2.0/jars/libs/shadow-commons-lang3-3.4.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/jars/libs/shadow-commons-lang3-3.4.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-android-19.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-compatibility-19.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc49ad3b0fe481f81239b8ada45c2239/jetified-truecaller-sdk-2.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/jars/libs/shadow-commons-lang3-3.4.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-android-19.3.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e55803bfe77e052be3ea1f5f838f8051/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-compatibility-19.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/jars/libs/shadow-commons-lang3-3.4.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-android-19.3.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de60f86db6d522a9fbcb0f15339365fc/jetified-truecaller-sdk-2.2.0/jars/libs/mediatek-compatibility-19.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.truecaller.android.sdk/truecaller-sdk/2.2.0/bd938c6aec5c439d2cc288a2b586c93da735b928/truecaller-sdk-2.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.truecaller.android.sdk/truecaller-sdk/2.2.0/cf54a872cf7878ef51e4d379e15e160e3da244ef/truecaller-sdk-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file('/Users/appleuser/Downloads/build2/app/jadeja.jks')
+            storePassword '9879949713@im'
+            keyPassword '9879949713@im'
+            keyAlias 'jadejaalias'
+        }
+    }
+    /*applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "loopytime"
+
+            def newApkName = project+".apk"
+
+            outputFileName = new File(newApkName)
+        }
+    }*/
+
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.loopytime.im"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 68
+        versionName "2.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/xml']
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    lintOptions {
+        // Returns whether lint should be quiet (for example, not write informational messages such as paths to report files written)
+        quiet true
+
+        // Whether lint should set the exit code of the process if errors are found
+        abortOnError false
+
+        // Returns whether lint will only check for errors (ignoring warnings)
+        ignoreWarnings true
+
+        // Returns whether lint should check for fatal errors during release builds. Default is true.
+        // If issues with severity "fatal" are found, the release build is aborted.
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation group: 'ch.acra', name: 'acra-mail', version: '5.4.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.exifinterface:exifinterface:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "com.google.android.exoplayer:exoplayer:2.10.5"
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.22'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+    implementation ("com.squareup.okhttp3:okhttp:4.3.1")
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.facebook.stetho:stetho-okhttp:1.5.0'
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation project(':filepicker')
+    implementation project(':camerakit')
+
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'org.webrtc:google-webrtc:1.0.32006'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.11.1'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'com.airbnb.android:lottie:3.0.6'
+    implementation files('libs/autobanh.jar')
+    implementation 'com.devlomi.record-view:record-view:2.0.1'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:2.0.24'
+
+    // Unit testing
+    testImplementation 'androidx.test.ext:junit:1.1.1'
+    testImplementation 'androidx.test:rules:1.2.0'
+    testImplementation 'androidx.test:runner:1.2.0'
+    testImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation "org.robolectric:robolectric:4.3"
+    testImplementation 'junit:junit:4.12'
+
+    // Instrumented testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+//Truecaller
+    implementation "com.truecaller.android.sdk:truecaller-sdk:2.2.0"
+    implementation 'com.github.hotchemi:android-rate:1.0.1'
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'com.google.android.gms:play-services-ads:17.1.2'
+}
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}

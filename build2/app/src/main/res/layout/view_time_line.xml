@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:resize_mode="fit"
+            app:use_controller="false" />
+
+        <ImageView
+            android:id="@+id/icon_video_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/play_button" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/close_layout"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/close_white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/close_layout"
+                android:gravity="center_horizontal"
+                android:layoutDirection="ltr"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/txtDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@android:color/white"
+                    android:text=""
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textTimeSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/txtVideoSize"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txtVideoSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="textStart"
+                    android:text=""
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent">
+
+            <SeekBar
+                android:id="@+id/handlerTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layoutDirection="ltr"
+                android:max="1000"
+                android:progressDrawable="@android:color/transparent"
+                android:secondaryProgress="0"
+                android:thumb="@drawable/apptheme_text_select_handle_middle" />
+
+            <com.loopytime.external.videotrimmer.view.ProgressBarView
+                android:id="@+id/timeVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/handlerTop"
+                android:visibility="gone" />
+
+            <com.loopytime.external.videotrimmer.view.TimeLineView
+                android:id="@+id/timeLineView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeVideoView" />
+
+            <com.loopytime.external.videotrimmer.view.RangeSeekBarView
+                android:id="@+id/timeLineBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/timeLineView"
+                android:layoutDirection="ltr" />
+
+            <View
+                android:id="@+id/lineTop"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/timeLineBar"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineTop"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_button_background"
+                    android:text="@string/cancel"
+                    android:textColor="@android:color/white" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/line_button" />
+
+                <Button
+                    android:id="@+id/btSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_button_background"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

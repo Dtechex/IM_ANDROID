@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Gradle: ch.acra:acra-core:5.4.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b689fe7ab5fadfcfe5967b3e6161a68/jetified-acra-core-5.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b689fe7ab5fadfcfe5967b3e6161a68/jetified-acra-core-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b689fe7ab5fadfcfe5967b3e6161a68/jetified-acra-core-5.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9de195c404251c45d9b62e075ab6e962/jetified-acra-core-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9de195c404251c45d9b62e075ab6e962/jetified-acra-core-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9de195c404251c45d9b62e075ab6e962/jetified-acra-core-5.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8121b9c4904c6cb3271a02a532c94b2a/jetified-acra-core-5.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8121b9c4904c6cb3271a02a532c94b2a/jetified-acra-core-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8121b9c4904c6cb3271a02a532c94b2a/jetified-acra-core-5.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/193648e1b181bb3f6c97f86453664a3b/jetified-acra-core-5.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/193648e1b181bb3f6c97f86453664a3b/jetified-acra-core-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/193648e1b181bb3f6c97f86453664a3b/jetified-acra-core-5.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c534df5f4e620d24e2d1fdc9b1d13d22/jetified-acra-core-5.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c534df5f4e620d24e2d1fdc9b1d13d22/jetified-acra-core-5.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c534df5f4e620d24e2d1fdc9b1d13d22/jetified-acra-core-5.4.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.acra/acra-core/5.4.0/d9ef16fe372e0e50343a99ef3862959a2c7a57d/acra-core-5.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.acra/acra-core/5.4.0/e41cd61d6c0765b78573f8503b4547aeae1941e5/acra-core-5.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChannelRequestActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/channelImageView"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/txtChannelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Demo Channel"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/txtChannelDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:maxLines="10"
+            android:padding="5dp"
+            android:text="Demo Channel"
+            android:textColor="@color/secondarytext"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/txtMembersCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:maxLines="10"
+            android:padding="5dp"
+            android:text="@string/subscribers"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/text_size_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnJoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/curved_gradient"
+                android:clickable="true"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/subscribe"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/btnDeney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/curved_accent"
+                android:clickable="true"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/nope"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/text_size_medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

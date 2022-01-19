@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_item_0"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menuNone"
+            android:title=""
+            android:visible="false" />
+    </group>
+    <group
+        android:id="@+id/group_item_2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/yourrides_menu"
+            android:title="@string/mychannels" />
+    </group>
+    <group
+        android:id="@+id/group_item_6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/theme"
+            android:title="@string/theme" />
+    </group>
+<!--    <group-->
+<!--        android:id="@+id/group_item_7"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/locked"-->
+<!--            android:title="@string/lc_contact" />-->
+<!--    </group>-->
+<!--    <group-->
+<!--        android:id="@+id/group_item_8"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/ranChats"-->
+<!--            android:title="@string/ran_chats" />-->
+<!--    </group>-->
+<!--    <group-->
+<!--        android:id="@+id/group_item_9"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/noteSelf"-->
+<!--            android:title="@string/note_self" />-->
+<!--    </group>-->
+    <group
+        android:id="@+id/group_item_3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/wallet_menu"
+            android:title="@string/accountsettings" />
+    </group>
+
+    <group
+        android:id="@+id/group_item_4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/invite_menu"
+            android:title="@string/invitefriends" />
+    </group>
+    <group
+        android:id="@+id/group_item_5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/help_menu"
+            android:title="@string/help" />
+    </group>
+</menu>

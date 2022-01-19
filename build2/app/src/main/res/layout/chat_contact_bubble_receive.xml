@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selected_chat_row">
+
+    <TextView
+        android:id="@+id/text_message_sender"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:paddingBottom="5dp"
+        android:layout_marginStart="4dp"
+        android:text="Name"
+        android:textColor="@color/primarytext"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/body_lay"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="viewStart"/>
+
+    <RelativeLayout
+        android:id="@+id/body_lay"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/chat_curved_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_message_sender">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/temp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:fontFamily="@font/font_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/icon"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="viewStart"/>
+
+        <TextView
+            android:id="@+id/phoneno"
+            android:fontFamily="@font/font_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_toEndOf="@+id/icon"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="viewStart"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_below="@+id/icon"/>
+
+        <TextView
+            android:id="@+id/addcontact"
+            android:text="Add contact"
+            android:fontFamily="@font/font_regular"
+            android:background="@drawable/contact_curved_bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textAlignment="viewStart"/>
+
+        <TextView
+            android:id="@+id/text_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/text_size_very_small"
+            android:textColor="@color/white"
+            android:text="11:15 PM"
+            android:paddingEnd="15dp"
+            android:paddingBottom="2dp"
+            android:layout_alignBottom="@+id/addcontact"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="viewStart"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

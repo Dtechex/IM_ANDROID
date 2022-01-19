@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:id="@+id/Lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/agree"
+        android:paddingTop="?attr/actionBarSize">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/desPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/pagerIndicator"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+        <com.loopytime.external.CirclePageIndicator
+            android:id="@+id/pagerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:visibility="visible"
+            app:fillColor="@color/colorPrimary"
+            app:pageColor="@color/colorPrimaryTrans"
+            app:strokeColor="@color/colorPrimaryTrans" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/agree"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/curved_accenttrans"
+        android:fontFamily="@font/font_regular"
+        android:gravity="center"
+        android:text="@string/continuekey"
+        android:textSize="@dimen/text_size_large" />
+
+    <RelativeLayout
+        android:id="@+id/loadingLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center_vertical"
+                android:text="@string/pleasewait"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginStart="10dp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

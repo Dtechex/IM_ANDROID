@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.loopytime.im">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK"
+        tools:node="replace" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <uses-permission android:name="android.permission.TYPE_APPLICATION_OVERLAY" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="false"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/MainTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:allowBackup"
+        tools:targetApi="q">
+        <activity
+            android:name=".RandomChatSettingActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".LockedChatListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LockedContactActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RandomChatListActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.truecaller.android.sdk.PartnerKey"
+            android:value="@string/partnerKey" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/im_ad_app_id" /> <!-- Declare notch support -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoStatusBarTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="appr.tc"
+                    android:scheme="https" />
+                <data
+                    android:host="appr.tc"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FloatingWidgetService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".FeedDetailActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoBarActivityTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@style/TranslucentTheme2"
+            tools:replace="android:theme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".WhatStatusFragmentFeedProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FeedLikes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MobileNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MobileNumberActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalkThough"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ImageOpenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".MediaDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/NoStatusBarTheme" />
+        <activity
+            android:name=".ProfileInfo"
+            android:label="@string/title_activity_profile_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name=".ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name=".SelectContact"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name=".LocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name=".AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DialogActivity"
+            android:theme="@style/dialog_theme" />
+        <activity
+            android:name=".LanguageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaseActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BlockedContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GroupInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseTheme"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppToolbarThemeNo2" />
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GroupChatActivity"
+            android:screenOrientation="portrait" />
+        <!--
+ <receiver android:name="com.hitasoft.loopytime.helper.AlarmReceiver">
+             <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+             </intent-filter>
+         </receiver>
+
+         <service
+             android:name="com.hitasoft.loopytime.helper.MyJobIntentService"
+             android:permission="android.permission.BIND_JOB_SERVICE" />
+        -->
+        <activity
+            android:name=".EditGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChannelInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyChannelsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChannelRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChannelCreatedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelpViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CallActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:excludeFromRecents="true"
+            android:showWhenLocked="true"
+            android:theme="@style/AppTheme.Dialog"
+            android:turnScreenOn="true" />
+        <activity
+            android:name=".CallContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChannelChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AllChannelsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".SubscribersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeleteAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeleteAccountReason"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForwardActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/jpg" />
+                <data android:mimeType="image/bmp" />
+                <data android:mimeType="image/png" />
+                <data android:mimeType="video/*" />
+                <!-- <data android:mimeType="text/*" /> -->
+                <!--
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="application/vnd.ms-xpsdocument" />
+                <data android:mimeType="application/x-cbz" />
+                <data android:mimeType="audio/*" />
+                -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".status.CameraKitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CameraKitActivity" />
+        <activity
+            android:name=".status.SingleStoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TrimmerActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".status.StoryActivity"
+            android:label="@string/title_activity_story_pager"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TrimmerActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".status.TextStatus"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TrimmerActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".status.StatusPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TrimmerActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".status.TrimmerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TrimmerActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_APP_ID"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/white" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.loopytime.im.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.loopytime.helper.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.loopytime.helper.ForegroundService"
+            android:exported="false" />
+        <service
+            android:name="com.loopytime.helper.FileUploadService"
+            android:exported="false" />
+        <service
+            android:name="com.loopytime.helper.CallNotificationService"
+            android:stopWithTask="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

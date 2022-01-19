@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rplyLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:layout_gravity="bottom"
+    android:clickable="true"
+    android:layout_marginBottom="56dp"
+    android:background="#fff">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/reply_background"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/rpName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="1"
+            android:text="Ankuuu's Status"
+            android:textColor="#4b4747"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+
+        <TextView
+            android:id="@+id/rpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="48dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:paddingTop="2dp"
+            android:text="Photo"
+            android:textColor="#4b4747"
+            android:textSize="14sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/sizeImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="12dp"
+        app:srcCompat="@drawable/msg_audio_cncel_load_selector" />
+</FrameLayout>

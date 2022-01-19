@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <RelativeLayout
+        android:id="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:fitsSystemWindows="false">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="false"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:expandedTitleGravity="center_horizontal|bottom"
+                    app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:toolbarId="@+id/toolbar">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_collapseMode="parallax">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:minHeight="230dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingBottom="16dp"
+                            android:textColor="#fff"
+                            android:textSize="24sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/overlay_nm"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/play_bc"
+                            android:scaleType="center"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_play_button" />
+
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="25dp"
+                        android:fitsSystemWindows="false"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin"
+                        app:layout_scrollFlags="snap">
+
+                        <LinearLayout
+                            android:id="@+id/tr1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fitsSystemWindows="false"
+                            android:gravity="center_vertical">
+
+                            <FrameLayout
+                                android:id="@+id/backPress"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+
+                                android:fitsSystemWindows="true">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center_vertical"
+                                    app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/avatarView"
+                                    android:layout_width="48dp"
+
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="22dp" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fitsSystemWindows="false"
+                                android:orientation="vertical"
+                                android:paddingLeft="8dp">
+
+                                <TextView
+                                    android:id="@+id/uName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:maxLines="1"
+                                    android:text="Ashish Nautiyal"
+                                    android:textColor="#fff"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans" />
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:textColor="#fff"
+                                    android:textSize="12sp"
+                                    android:typeface="sans" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/download"
+                                android:layout_width="48dp"
+                                android:layout_height="?attr/actionBarSize"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:cropToPadding="true"
+                                android:scaleType="center"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ic_cloud_computing" />
+
+                            <ImageView
+                                android:id="@+id/delete"
+                                android:layout_width="48dp"
+                                android:layout_height="?attr/actionBarSize"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_baseline_delete_24" />
+
+                            <ImageView
+                                android:id="@+id/react"
+                                android:layout_width="48dp"
+                                android:layout_height="?attr/actionBarSize"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="center"
+                                android:tint="#fff"
+                                app:srcCompat="@drawable/ic_insert_emoticon_black_24dp" />
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/nsv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="8dp"
+
+                android:paddingBottom="56dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <LinearLayout
+                    android:id="@+id/notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/anchorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="1.3dp"
+                        android:paddingLeft="14dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="14dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="#454343"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="4dp"
+                        android:drawablePadding="2dp"
+                        android:drawableTint="@color/secondary_text_default_material_light"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="1 reaction &amp; 2 comments"
+                        android:textColor="@color/secondary_text_default_material_light"
+                        android:textSize="12sp"
+                        android:typeface="sans" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listLikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/noComments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="14dp"
+                        android:drawableLeft="@drawable/ic_textsms_white_18dp"
+                        android:drawablePadding="4dp"
+                        android:drawableTint="@color/secondary_text_default_material_light"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="4dp"
+                        android:text="No comments yet"
+                        android:textColor="@color/secondary_text_default_material_light"
+                        android:textSize="15sp"
+                        android:typeface="sans"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/show_previous"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Load previous comments"
+                        android:textColor="@color/secondary_text_default_material_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <include
+                        android:id="@+id/prev_shimmer"
+                        layout="@layout/comment_item_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/show_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Load more comments"
+                        android:textColor="@color/secondary_text_default_material_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <include
+                        android:id="@+id/next_shimmer"
+                        layout="@layout/comment_item_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include layout="@layout/feed_comment_reply" />
+            <LinearLayout
+                android:id="@+id/editLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:layout_toStartOf="@+id/record_button"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingBottom="8dp"
+                android:paddingEnd="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_divider">
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/font_regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/say_something"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:isScrollContainer="true"
+                        android:maxLines="6"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/send"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:foregroundGravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/sent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/view_like_feed_list" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <FrameLayout
+            android:id="@+id/pagerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f00"
+            android:clickable="true">
+
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

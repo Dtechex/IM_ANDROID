@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:statusBarBackground="@drawable/gradient">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/gradient"
+                    app:contentInsetLeft="10dp"
+                    app:contentInsetStart="10dp"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/navBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/nav"
+                            android:tint="@color/colorPrimary" />
+
+                        <ImageView
+                            android:id="@+id/appName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/header_logo" />
+
+                        <ImageView
+                            android:id="@+id/searchBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="10dp"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/search" />
+
+                        <RelativeLayout
+                            android:id="@+id/deleteLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/closeDelete"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="5dp"
+                                android:padding="10dp"
+                                android:src="@drawable/back_arrow"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/logCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_regular"
+                                android:layout_toEndOf="@+id/closeDelete"
+                                android:layout_centerVertical="true"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="10dp"
+                                android:singleLine="true"
+                                android:text="@string/user_name"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                />
+
+                            <ImageView
+                                android:id="@+id/deleteLog"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="5dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:padding="10dp"
+                                android:scaleType="fitEnd"
+                                android:tint="@color/white"
+                                android:src="@drawable/delete" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:elevation="5dp"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/tabUnderline"
+                    app:tabMode="fixed"
+                    app:tabPaddingEnd="0dp"
+                    app:tabPaddingStart="0dp"
+                    app:tabSelectedTextColor="@color/tabFont"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabTextColor="@color/secondarytext" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <LinearLayout
+                android:id="@+id/fabSearch"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="25dp"
+                android:background="@drawable/fablay_bg"
+                android:elevation="5dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/fab"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/home_page_chat" />
+            </LinearLayout>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/navigationbg"
+            android:fitsSystemWindows="true"
+            android:theme="@style/NavigationView"
+            app:headerLayout="@layout/nav_header_fragment_main"
+            app:itemTextAppearance="@style/NavigationDrawerTextStyle"
+            app:itemTextColor="@color/primarytext"
+            app:menu="@menu/activity_fragment_main_drawer" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</FrameLayout>

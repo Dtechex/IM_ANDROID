@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentlay"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            app:civ_fill_color="@color/white"
+            app:civ_border_overlay="true"
+            android:src="@drawable/temp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:ellipsize="end"
+        android:fontFamily="@font/font_regular"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textDirection="ltr"
+        android:text="Demo user"
+        android:textColor="@color/primarytext"
+        android:textSize="15dp"
+        />
+</LinearLayout>

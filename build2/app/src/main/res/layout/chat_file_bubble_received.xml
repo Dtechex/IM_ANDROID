@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/selected_chat_row">
+
+    <TextView
+        android:id="@+id/text_message_sender"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:layout_marginStart="15dp"
+        android:paddingBottom="1dp"
+        android:text="Name"
+        android:textColor="@color/primarytext"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="viewStart"/>
+
+    <RelativeLayout
+        android:id="@+id/file_body_lay"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/chat_curved_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_message_sender">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/icon_file_unknown"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/file_type_tv"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="PDF"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/primarytext"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="5sp"
+            app:autoSizeStepGranularity="1sp"
+            android:layout_alignBottom="@+id/icon"
+            android:layout_alignStart="@+id/icon"
+            android:layout_alignEnd="@+id/icon"
+            android:gravity="center|bottom"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            tools:ignore="MissingPrefix"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/filename"
+            android:fontFamily="@font/font_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:layout_toEndOf="@+id/icon"
+            android:layout_toStartOf="@+id/progressbar"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="viewStart"/>
+
+        <com.loopytime.external.ProgressWheel
+            xmlns:wheel="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="visible"
+            wheel:matProg_barColor="@color/colorPrimary"
+            wheel:matProg_rimColor="#40FFFFFF"
+            wheel:matProg_rimWidth="2dp"
+            wheel:matProg_barWidth="2dp"/>
+
+        <ImageView
+            android:id="@+id/downloadicon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/download"
+            android:tint="@color/white"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/text_message_time"
+            android:fontFamily="@font/font_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_very_small"
+            android:textColor="@color/white"
+            android:text="11:15 PM"
+            android:paddingEnd="15dp"
+            android:paddingBottom="2dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="viewStart"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

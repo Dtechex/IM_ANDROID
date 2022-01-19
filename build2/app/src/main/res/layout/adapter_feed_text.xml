@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 Actor LLC. <https://actor.im>
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/load_prev_subcomment"
+        android:fontFamily="sans-serif-light"
+        android:typeface="sans"
+        android:paddingTop="8dp"
+        android:layout_marginTop="-8dp"
+        android:paddingLeft="90dp"
+        android:paddingBottom="8dp"
+        android:includeFontPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:text="@string/prev_messages"
+        android:textColor="#646464"
+        android:textSize="15sp" />
+
+    <com.loopytime.external.videotrimmer.view.BubbleContainerFeed xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true">
+
+        <com.loopytime.external.videotrimmer.view.BubbleTextContainerFeed
+            android:id="@+id/fl_bubble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true">
+
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:includeFontPadding="false"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:fontFamily="sans-serif-light"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+
+                android:textColor="#313131"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:id="@+id/lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="-4dp"
+                android:layout_marginRight="-4dp"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/stateIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="9dp"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+            <!--<TextView
+                android:layout_gravity="center"
+                android:id="@+id/bnm"
+                android:layout_width="wrap_content"
+                android:text="jbjkb"
+                android:layout_height="wrap_content"
+                android:bg_default_pattern="#f00"/>-->
+        </com.loopytime.external.videotrimmer.view.BubbleTextContainerFeed>
+    </com.loopytime.external.videotrimmer.view.BubbleContainerFeed>
+</LinearLayout>

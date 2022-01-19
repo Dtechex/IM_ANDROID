@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChangeNumberActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:layout_margin="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="2"
+            android:text="@string/please_enter_your_new_country_code_and_phone_number"
+            android:textColor="@color/secondarytext"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:theme="@style/TextInputLayoutDesign">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtCountryCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/country_code"
+                android:inputType="text"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/text_size_medium"
+                app:backgroundTint="@color/divider" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:theme="@style/TextInputLayoutDesign">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/text_size_medium"
+                app:backgroundTint="@color/divider" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnNext"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="25dp"
+        android:background="@drawable/fablay_bg"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fab"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/floating_right_arrow" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tabName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="Tabsdfgfdsg"
+        android:textColor="@color/secondarytext"
+        android:textSize="14sp"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/indication"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_toEndOf="@+id/tabName"
+        android:src="@drawable/gradient_round"
+        app:layout_constraintTop_toTopOf="@+id/tabName"
+        app:layout_constraintEnd_toEndOf="@+id/tabName"/>
+
+</RelativeLayout>

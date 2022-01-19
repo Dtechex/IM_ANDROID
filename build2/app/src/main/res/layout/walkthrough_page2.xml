@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 Actor LLC. <https://actor.im>
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#45A7CB"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:id="@+id/imv1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Chat"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:maxLines="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="You can chat with your friends and family and stay close to them."
+                android:textColor="#fff"
+                android:lineSpacingExtra="1.5dp"
+                android:textSize="16sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Learn More"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+
+        <LinearLayout
+            android:id="@+id/lay2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Chat"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5dp"
+                android:textSize="16sp"
+                android:text="You can chat with your friends and family and stay close to them."
+                android:textColor="#fff"
+                android:typeface="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Learn More"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:typeface="sans" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imv2"
+            android:layout_marginLeft="8dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:id="@+id/imv3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/lay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv3_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Chat"
+                android:textColor="#fff"
+                android:textSize="20sp"
+
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:fontFamily="sans-serif"
+                android:text="You can chat with your friends and family and stay close to them."
+                android:textColor="#fff"
+                android:lineSpacingExtra="1.5dp"
+                android:textSize="16sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Learn More"
+                android:textColor="#fff"
+
+                android:textSize="14sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.supercharge.shimmerlayout.ShimmerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shimmer_animation_duration="1200"
+
+    app:shimmer_auto_start="true"
+    app:shimmer_color="#40ffffff">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp"
+
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:id="@+id/notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/tr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp"
+
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp">
+
+                <View
+                    android:id="@+id/avatarView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shimmer_avatar_background" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp">
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="15dp"
+                        android:background="@color/shimmer_background_color" />
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/shimmer_background_color" />
+
+                    <!--    <TextView
+                            android:id="@+id/uName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="Ashish Nautiyal"
+                            android:textColor="#454343"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="sans" />-->
+
+                    <!-- <TextView
+                         android:id="@+id/textView3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="0dp"
+                         android:fontFamily="sans-serif"
+                         android:gravity="center"
+                         android:includeFontPadding="false"
+                         android:textColor="#646464"
+                         android:textSize="12sp"
+                         android:typeface="sans" />-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:minHeight="200dp">
+
+                <View
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/shimmer_background_color"
+                    android:minHeight="200dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- <TextView
+                     android:id="@+id/text1"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:gravity="center"
+                     android:minHeight="200dp"
+                     android:paddingBottom="16dp"
+                     android:paddingLeft="16dp"
+                     android:paddingRight="16dp"
+                     android:paddingTop="16dp"
+                     android:textColor="#fff"
+                     android:textSize="24sp"
+                     android:visibility="gone" />-->
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="170dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/shimmer_background_color"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shimmer_avatar_background" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</io.supercharge.shimmerlayout.ShimmerLayout>
